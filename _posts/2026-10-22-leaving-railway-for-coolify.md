@@ -23,7 +23,7 @@ My five apps average about 1.3 GB of RAM in total and almost no CPU. They sleep 
 |---|---|---|
 | Railway (stay, rotate) | ~$5 | Same platform that just leaked secrets |
 | Cloudflare Containers | $5 minimum + usage, ~$10–25 for me | Requires Workers Paid. Memory is billed at the full instance size while awake, not actual usage. No managed Postgres. Container disk is wiped on restart, so volumes need rework. |
-| Google Cloud free tier | ~$0 | Cloud Run throttles CPU after the response is sent, so in-process background jobs and queues stall. Cloud SQL has no free tier, so Postgres goes on the free e2-micro VM. Real code changes needed. |
+| Google Cloud | $0 only on paper | The free tier holds only if every app scales to zero. My apps are .NET: cold starts take seconds, and Cloud Run throttles CPU after the response is sent, so in-process background jobs and queues stall. Keeping a .NET service warm with always-on CPU switches it to instance-based billing, which alone costs more than my whole Railway bill. Cloud SQL has no free tier either. |
 | **Own Ubuntu server + Coolify + Cloudflare Tunnel** | **~$0 extra** | You patch the OS. Home power and ISP outages take sites down. |
 
 I picked the last one. [Coolify](https://coolify.io) gives you the Railway workflow on your own box: push to `main` deploys, env vars live in a UI, one-click Postgres, and scheduled database backups to S3-compatible storage (I use Cloudflare R2). Cloudflare Tunnel publishes the sites without opening any ports on my router.

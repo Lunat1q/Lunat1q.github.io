@@ -1,7 +1,6 @@
 title: Max P
 description: Notes on self-hosting, side projects and the tools I build them with.
-author:
-  name: Max P
+author: Max P
 url: https://lunat1q.github.io
 theme: minima
 markdown: kramdown
