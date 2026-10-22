@@ -2,6 +2,8 @@
 layout: post
 title: "Leaving Railway for self-hosted Coolify, with Claude Code doing the moving"
 date: 2026-10-22
+categories: [Self-hosting]
+tags: [railway, coolify, claude-code, cloudflare, migration]
 ---
 
 ## Why I'm leaving
