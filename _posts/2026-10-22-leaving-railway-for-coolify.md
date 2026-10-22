@@ -27,8 +27,29 @@ My five apps average about 1.3 GB of RAM in total and almost no CPU. They sleep 
 | Cloudflare Containers | $5 minimum + usage, ~$10–25 for me | Requires Workers Paid. Memory is billed at the full instance size while awake, not actual usage. No managed Postgres. Container disk is wiped on restart, so volumes need rework. |
 | Google Cloud | $0 only on paper | The free tier holds only if every app scales to zero. My apps are .NET: cold starts take seconds, and Cloud Run throttles CPU after the response is sent, so in-process background jobs and queues stall. Keeping a .NET service warm with always-on CPU switches it to instance-based billing, which alone costs more than my whole Railway bill. Cloud SQL has no free tier either. |
 | **Own Ubuntu server + Coolify + Cloudflare Tunnel** | **~$0 extra** | You patch the OS. Home power and ISP outages take sites down. |
+| Rented VPS + Coolify | ~€6–10 | Same setup on someone else's hardware. See below. |
 
 I picked the last one. [Coolify](https://coolify.io) gives you the Railway workflow on your own box: push to `main` deploys, env vars live in a UI, one-click Postgres, and scheduled database backups to S3-compatible storage (I use Cloudflare R2). Cloudflare Tunnel publishes the sites without opening any ports on my router.
+
+## No home server? Rent a VPS
+
+Everything below works the same on a rented VPS. Coolify's documented minimum is 2 CPU cores, 2 GB RAM and 10 GB of disk. Coolify itself takes 0.5–1 GB, so for a handful of small apps plus their databases get **4 GB of RAM** and 40 GB or more of disk.
+
+| Provider | Plan (approx.) | Specs | Price / month |
+|---|---|---|---|
+| Hetzner Cloud | Cost-Optimized (CX23) | 2 vCPU, 4 GB, 40 GB | from €5.99 + VAT |
+| Contabo | Entry Cloud VPS | ~3 vCPU, 8 GB | ~€5–6 (cheapest on longer terms); slower disk and support |
+| Netcup | RS 1000 | dedicated cores, 8 GB | ~€9 |
+| DigitalOcean | Basic Droplet | 2 vCPU, 4 GB | $24 |
+| Oracle Cloud | Always Free Ampere A1 | up to 4 ARM cores, 24 GB | $0, but capacity is hard to get and idle instances can be reclaimed |
+
+Prices as of October 2026, excluding VAT. They change often, so check the provider's pricing page. For most people, Hetzner's 4 GB plan is the sweet spot: about €6–7 a month all-in, or roughly what Railway Hobby plus a little usage costs.
+
+VPS-specific notes:
+
+- You have a public IP, so you can skip Cloudflare Tunnel and let Coolify issue Let's Encrypt certificates on ports 80/443 ("direct mode" in the prompt). The Tunnel still works if you'd rather keep every port closed.
+- Firewall everything except 22, 80 and 443. Don't expose Coolify's dashboard on port 8000: reach it through an SSH tunnel (`ssh -L 8000:localhost:8000 you@server`) or the provider's firewall allow-list.
+- Provider snapshots (usually ~20% of the server price) are a nice extra, but keep the off-site database backups to R2/S3 anyway.
 
 ## Rotate first, migrate second
 
