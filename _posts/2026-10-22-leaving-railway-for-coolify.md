@@ -49,7 +49,7 @@ VPS-specific notes:
 
 - You have a public IP, so you can skip Cloudflare Tunnel and let Coolify issue Let's Encrypt certificates on ports 80/443 ("direct mode" in the prompt). The Tunnel still works if you'd rather keep every port closed.
 - Firewall everything except 22, 80 and 443. Don't expose Coolify's dashboard on port 8000: reach it through an SSH tunnel (`ssh -L 8000:localhost:8000 you@server`) or the provider's firewall allow-list.
-- Provider snapshots (usually ~20% of the server price) are a nice extra, but keep the off-site database backups to R2/S3 anyway.
+- Provider backups (on Hetzner, +20% of the server price) are a nice extra, but keep the off-site database backups to R2/S3 anyway.
 
 ## Rotate first, migrate second
 
