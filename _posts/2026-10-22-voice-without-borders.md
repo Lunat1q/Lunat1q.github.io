@@ -8,19 +8,17 @@ tags: [voice-without-borders, audio, remote-work, windows, open-source]
 
 ## The problem
 
-I work from home. My desk has two computers on it: my own PC and a work laptop. I have one good headset.
+Working remotely, a home PC and a work laptop often sit side by side on one desk, with one headset. You want two things from that headset at the same time:
 
-During the day I want two things from that headset at the same time:
+- **Work audio**: calls and meetings. That comes from the work laptop.
+- **Your own audio**: music, podcasts. That comes from your PC, because you don't want to play it from a work computer.
 
-- **Work audio**: Teams calls, meeting notifications, the occasional screen-share video. That comes from the work laptop.
-- **My audio**: music, podcasts, a YouTube video in the background. That comes from my PC, because I don't want Spotify, my personal accounts or my listening history on a company machine.
+The usual options:
 
-The usual ways around it are all a bit annoying:
-
-- **Swap the cable** (or the USB dongle) every time a call starts. You miss the first ten seconds of every meeting.
-- **Bluetooth multipoint.** Works for some headsets, but usually one source plays at a time, switching is slow, and wired or USB headsets don't have it at all.
-- **A second headset or speakers** for one of the machines. More stuff on the desk, and now you're wearing headphones *and* hearing speakers.
-- **Play music on the work laptop.** Works, but it's a work device: IT can see what's installed, and your personal stuff ends up mixed with work.
+- **Move the cable** (or USB dongle) between the computers. The headset then plays one computer at a time, never both.
+- **Bluetooth multipoint.** Only some headsets have it, and wired or USB headsets don't.
+- **A second headset or speakers** for one of the machines.
+- **Play music on the work laptop**, which is what you wanted to avoid.
 
 So I wrote a small app for it: [Voice Without Borders](https://github.com/Lunat1q/VoiceWithoutBorders). Think *Mouse Without Borders*, but for audio. Plug the headset into one computer and use it for both.
 
