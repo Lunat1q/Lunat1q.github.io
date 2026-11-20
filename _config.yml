@@ -180,6 +180,8 @@ collections:
   tabs:
     output: true
     sort_by: order
+  docs: # standalone pages (app policies, references), not in the sidebar
+    output: true
 
 defaults:
   - scope:
@@ -202,6 +204,12 @@ defaults:
     values:
       layout: page
       permalink: /:title/
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: page
+      permalink: /docs/:path/
 
 sass:
   style: compressed
