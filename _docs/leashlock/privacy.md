@@ -53,4 +53,4 @@ If this policy changes, the new version will be posted on this page with a new e
 
 ## Contact
 
-Questions about this policy: contact Max P on GitHub, [github.com/Lunat1q](https://github.com/Lunat1q).
+Questions about this policy: [lunatiqapps@gmail.com](mailto:lunatiqapps@gmail.com).
