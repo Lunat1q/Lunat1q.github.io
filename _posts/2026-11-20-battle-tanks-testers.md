@@ -38,19 +38,18 @@ Other bits:
 
 ## How to become a tester
 
-The app is paid on Google Play, so testers get a promo code and install it for free. Four steps:
+The app is paid on Google Play, but **for the next two weeks (from 21 November 2026) it's on a 100% sale**: free, no promo code needed. Three steps:
 
-1. **Join the Google Group** [battletanks-testers](https://groups.google.com/g/battletanks-testers) with the Google account you use on your phone or TV. Joining the group makes you a tester.
-2. **Email me for a promo code** at **lunatiqapps@gmail.com** (template below). Use the same Google account address you joined the group with, so I can check it.
-3. **Redeem the code**: in the Play Store app, tap your profile picture → **Payments & subscriptions** → **Redeem code**, or go to [play.google.com/redeem](https://play.google.com/redeem).
-4. **Install** Battle Tanks from its Play Store page. On a TV, install it from the Play Store on the TV, or from the web page by picking the TV as the device.
+1. **Join the Google Group** [battletanks-testers](https://groups.google.com/g/battletanks-testers) with the Google account you use on your phone or TV. The group alone doesn't make you a tester, it only lets you opt in.
+2. **Opt in to the test**: open [play.google.com/apps/testing/com.lunatiq.battletanks](https://play.google.com/apps/testing/com.lunatiq.battletanks) signed in with that same account and tap **Become a tester**. Only opted-in testers count for Google's 14 days.
+3. **Install** Battle Tanks from its Play Store page. The price shows as free during the sale. On a TV, install it from the Play Store on the TV, or from the web page by picking the TV as the device.
 
-> Please stay in the test (and keep the app installed) for at least 14 days. That's the period Google counts before the game can go to production.
+> Please stay opted in (and keep the app installed) for at least 14 days. That's the period Google counts before the game can go to production.
 {: .prompt-info }
 
-### Email template
+### Missed the sale?
 
-Copy, fill in, send to **lunatiqapps@gmail.com**:
+Email me for a promo code at **lunatiqapps@gmail.com** from the Google account you joined the group with, so I can check it. Redeem it in the Play Store app (profile picture → **Payments & subscriptions** → **Redeem code**) or at [play.google.com/redeem](https://play.google.com/redeem), then install.
 
 ```text
 Subject: Battle Tanks tester: promo code
