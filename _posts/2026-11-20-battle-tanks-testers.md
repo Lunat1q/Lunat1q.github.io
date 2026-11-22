@@ -4,7 +4,7 @@ title: "Battle Tanks on Android: looking for testers"
 date: 2026-11-20
 categories: [Projects, Games]
 tags: [battle-tanks, android, android-tv, google-play, rust, bevy]
-image: { path: /assets/img/battletanks/classic.png, alt: "A classic stage of Battle Tanks on a TV" }
+image: { path: /assets/img/battletanks/title.png, alt: "The Battle Tanks title screen on a TV" }
 ---
 
 [Battle Tanks](https://github.com/Lunat1q/BattleTanks) is a tank game for one or two players, written in Rust with [Bevy](https://bevy.org/). It started as a couch game for the TV with two controllers. It now also runs on Android TV and Android phones, and it's in a closed test on Google Play. Google wants a closed test to run for 14 days before an app can go to production, so I need testers. This post is about the game and how to join.
